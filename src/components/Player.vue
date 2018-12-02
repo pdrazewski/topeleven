@@ -5,10 +5,11 @@
             <span class="badge"></span>
             <span class="brand"></span>
             <span class="sponsor"></span>
+            <span class="rate"> {{ rate }} </span>
         </span>
         <span class="sleeve sleeve-r"></span>
         <span class="sleeve sleeve-l"></span>
-        <span class="name">Kowalski</span>
+        <span class="name">{{ name }}</span>
     </div>
 </template>
 <script lang="ts">
@@ -16,7 +17,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Player extends Vue {
-  @Prop() private msg!: string;
+  @Prop() private name!: string;
+  
+  @Prop() private rate!: string;
 }
 </script>
 <style scoped lang="scss">
@@ -28,11 +31,18 @@ export default class Player extends Vue {
     overflow: hidden;
     display: inline-block;
 }
+.rate {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
 .front {
     width: 90px;
     height: 150px;
     left: 45px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
     border-top: 8px solid transparent;
     border-bottom: 5px solid transparent;
@@ -75,8 +85,6 @@ span {
     width: 50px;
     height: 60px;
     background: #f6f6f6;
-    border-color: #1e1e20;
-    border-width: 2px;
     z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
