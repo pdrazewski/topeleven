@@ -2,9 +2,9 @@
     <div class="kit">
         <span class="front">
             <span class="neck"></span>
+            <span class="neck_overlay"></span>
+            <span class="pattern"></span>
             <span class="badge"></span>
-            <span class="brand"></span>
-            <span class="sponsor"></span>
             <span class="rate"> {{ rate }} </span>
         </span>
         <span class="sleeve sleeve-r"></span>
@@ -23,32 +23,46 @@ export default class Player extends Vue {
 }
 </script>
 <style scoped lang="scss">
+
+$kit-width: 180px;
+$kit-height: 200px;
+
 .kit {
-    width: 180px;
-    height: 200px;
+    width: $kit-width;
+    height: $kit-height;
     margin: 10px 5px;
     position: relative;
     overflow: hidden;
     display: inline-block;
+    &:after {
+        display: block;
+        content: "";
+        width: 100px;
+        height: 20px;
+        box-shadow: 11px 20px 50px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        bottom: 54px;
+        left: 36px;
+    }
 }
 .rate {
     position: absolute;
-    top: 50px;
+    top: 60px;
     width: 100%;
     text-align: center;
-    font-size: 34px;
+    font-size: 30px;
+    letter-spacing: -0.5px;
     font-weight: bold;
+    z-index: 4;
 }
 .front {
-    width: 90px;
-    height: 150px;
+    width: $kit-width/2;
+    height: ($kit-height)-50;
     left: 45px;
     z-index: 2;
-    border-top: 8px solid transparent;
-    border-bottom: 5px solid transparent;
+    overflow: hidden;
+    border-radius: 0 5px 5px;
     background-color: #f6f6f6;
-    border-top: 2px solid #1e1e20;
-    border-bottom: 5px solid rgba(221, 221, 221, 0.3);
 }
 span {
     display: block;
@@ -66,14 +80,36 @@ span {
     border-top-color: red;
     position: relative;
 }
+.pattern {
+    width: 0;
+    height: 0;
+    border-left: 145px solid transparent;
+    border-bottom: 186px solid #ececec;
+    top: 10px;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
 .badge {
     width: 15px;
     height: 15px;
-    background: gold;
+    background-color: red;
+    right: 10px;
     opacity: 0.5;
-    background-color: white;
-    right: 15px;
+    z-index: 2;
+    position: absolute;
     top: 25px;
+}
+.neck_overlay {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 16px solid #ccac00;
+    top: -20px;
+    left: 25px;
+    border-top-color: #f6f6f6;
+    position: relative;
 }
 .sleeve-r {
     left: 108px;
@@ -88,15 +124,6 @@ span {
     z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.sleeve:after {
-    content: '';
-    width: 100%;
-    height: 10px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    border-bottom: 5px solid rgba(18, 18, 19, 0.15);
-}
 .sleeve-l {
     left: 20px;
     transform: rotate(55deg);
@@ -108,9 +135,7 @@ span {
     width: 100%;
     text-align: center;
     text-transform: capitalize;
-    font-size: 30px;
-    font-family: arial;
-    font-weight: bold;
+    font-size: 28px;
     color: #fff;
 }
 </style>

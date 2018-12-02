@@ -1,26 +1,12 @@
 <template>
   <div class="home">
-    <div class="header">
-      <div class="hamburger">
-        <div class="spinner"></div>
-        <div class="spinner"></div>
-        <div class="spinner"></div>
-      </div>
-      <div class="logo">topeleven.pl <span>...the best by the numbers</span></div>
-    </div>
     <div class="lead">
       <h1>Nasza najlepsza jedenastka</h1>
       <p>Według not, rankingów oraz opinii zebranych z
         dziesiątek serwisów branzowych, opinii influencerów, for fanclubów</p>
-      <a href="#">Dowiedz się jak zbieramy infmoracje</a>
-      <p class="subs">Chcesz otrzymywac powiadomienie mailowe po
-        kazdej aktualizacji rankingu? zapisz sie juz teraz.</p>
-        <div>
-           <input type="text">
-           <button type="submit">Zapisz mnie</button>
-        </div>
+      Dowiedz się jak zbieramy infmoracje
     </div>
-    <FootballPitch style="width:60%;padding: 0 50px; right: 0" />
+    <FootballPitch class="footballPitch" />
   </div>
 </template>
 
@@ -38,10 +24,8 @@ export default class Home extends Vue {}
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .lead {
-  position: absolute;
-  max-width: 500px;
-  top: 100px;
-  left: 45px;
+  float: left;
+  width: 40%;
   text-align: left;
   h1 {
     font-size: 50px;
@@ -69,52 +53,8 @@ export default class Home extends Vue {}
     color: #777;
   }
 }
-.logo {
-  float: left;
-  margin-left: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    span {
-      font-size: 12px;
-      font-weight: normal;
-    }
-}
-.header {
-  clear: both;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
-  padding: 20px;
-}
-.hamburger {
-    height: 40px;
-    width: 33px;
-    margin: 0 0 0 44px;
-    cursor: pointer;
-    float: left;
-    position: relative;
-     left: -20px;
-    .spinner {
-    margin: 8px 0 0;
-    height: 2px;
-    width: 100%;
-    background: #000;
-    -webkit-transition: background .3s;
-    transition: background .3s;
-    }
-}
-.nav {
+.footballPitch {
   float: right;
-  margin-right: 20px;
-  padding: 9px 10px;
-    a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-    margin-left: 30px;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  width: 60%;
 }
 </style>

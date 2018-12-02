@@ -2,15 +2,20 @@
   <div class="about">
     <div class="lead">
       <h1>Jak to działa?</h1>
-      <p>Według not, rankingów oraz opinii zebranych z
-        dziesiątek serwisów branzowych, opinii influencerów, for fanclubów</p>
-      Dowiedz się jak zbieramy infmoracje
-      <p class="subs">Chcesz otrzymywac powiadomienie mailowe po
-        kazdej aktualizacji rankingu? zapisz sie juz teraz.</p>
-        <div>
-           <input type="text">
-           <a href="#submit">Zacznij juz teraz</a>
-        </div>
+      <p>
+          - abonament 9,9 pln
+            - trendy formy per zawodnik (najwiekszy skok not w gore, najwiekszy spadek)
+            - trend formy kadry
+            - dopasowania kadry - per liga / per wiek / per ustawienie
+            - powiadomienia o zmianach
+      </p>
+      <p>
+          - abonament 29,90 pln
+            - dodawanie swoich zawodnikow
+            - tworzenie wlasnej kadry
+            - wlasne rankingi
+            - udostepnianie rankingow / ocen po meczu
+      </p>
     </div>
   </div>
 </template>
@@ -24,7 +29,7 @@ import FootballPitch from '@/components/FootballPitch.vue'; // @ is an alias to 
     FootballPitch,
   },
 })
-export default class Home extends Vue {}
+export default class Plan extends Vue {}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
