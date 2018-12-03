@@ -230,35 +230,44 @@ $line-border: dashed 2px rgba(255,255,255,0.5);
       left: 50%;
   }
   .p2 {
-      top: 350px;
+      top: 330px;
       left: 20%;
   }
   .p3 {
-      top: 350px;left: 290px;
+      top: 330px;
+      left: 40%;
   }
   .p4 {
-      top: 350px;left: 460px;
+      top: 330px;
+      left: 60%;
   }
   .p5 {
-      top: 350px;left: 610px;
+      top: 330px;
+      left: 80%;
   }
   .p6 {
-      top: 220px;left: 150px;
+      top: 210px;
+      left: 26%;
   }
   .p7 {
-      top: 220px;left: 290px;
+      top: 210px;
+      left: 42%
   }
   .p8 {
-      top: 220px;left: 460px;
+      top: 210px;
+      left: 58%;
   }
   .p9 {
-      top: 220px;left: 610px;
+      top: 210px;
+      left: 74%;
   }
   .p10 {
-      top: 110px;left: 310px;
+      top: 100px;
+      left: 42%;
   }
   .p11 {
-      top: 110px;left: 430px;
+      top: 100px;
+      left: 58%;
   }
 }
 </style>

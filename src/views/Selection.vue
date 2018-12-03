@@ -2,7 +2,7 @@
   <div class="cms about">
     <div class="cms_content">
       <h1 class="cms_title">
-        Jak działa nasz system ocen?
+        Selekcja - czyli obserwowani gracze.
       </h1>
       <div class="cms_text">
         <h2>Kim jestesmy?</h2>

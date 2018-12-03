@@ -4,7 +4,7 @@
       <h1>Nasza najlepsza jedenastka</h1>
       <p>Według not, rankingów oraz opinii zebranych z
         dziesiątek serwisów branzowych, opinii influencerów, for fanclubów</p>
-      Dowiedz się jak zbieramy infmoracje
+      <router-link to="/about">Dowiedz się jak zbieramy infmoracje</router-link>
     </div>
     <FootballPitch class="footballPitch" />
   </div>

@@ -5,8 +5,8 @@
         <div class="logo"><router-link to="/">topeleven.pl</router-link></div>
         <div class="nav">
           <router-link to="/about">Jak to działa?</router-link>
-          <router-link to="/about">Kadra</router-link>
-          <router-link to="/plan">Subskrybuj</router-link>
+          <router-link to="/selection">Selekcja</router-link>
+          <router-link to="/subscribe">Subskrybuj</router-link>
         </div>
       </div>
     </div>
@@ -92,8 +92,8 @@ body {
   padding: 20px 100px;
   text-align: center;
   font-size: 12px;
-  line-height: 18px;
-  color: #444;
+  line-height: 21px;
+  color: #777;
   clear: both;
   background: transparent;
 }
